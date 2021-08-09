@@ -1,11 +1,12 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap'
 import Ratings from 'react-ratings-declarative';
+import { Link } from 'react-router-dom';
 const MovieCard = ({movie,handleDelate}) => {
     return (
         <div>
             <Card style={{ width: '20rem'}}>
-                <Card.Img variant="top" src={movie.posterUrl} height="300px" />
+            <Link to={`/movie/${movie.id}`}><Card.Img variant="top" src={movie.posterUrl} height="300px" /></Link>
                 <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
                     <Card.Text>
@@ -30,6 +31,7 @@ const MovieCard = ({movie,handleDelate}) => {
                     <Button variant="primary" onClick={()=>handleDelate(movie.id)}>Remove</Button>
                 </Card.Body>
             </Card>
+            
         </div>
     )
 }

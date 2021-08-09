@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button,Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const AddMovie = ({ handleAdd}) => {
   const [show, setShow] = useState(false);
@@ -30,6 +31,7 @@ const AddMovie = ({ handleAdd}) => {
   };
   return (
     <div>
+      <Link to={'/add'}>
       <Button variant="primary" onClick={handleShow}>
         Add Movie
       </Button>
@@ -83,6 +85,7 @@ const AddMovie = ({ handleAdd}) => {
           </Button>
         </Modal.Footer>
       </Modal>
+      </Link>
     </div>
   );
 };

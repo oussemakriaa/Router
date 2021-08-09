@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Container, FormControl, Nav, Navbar } from 'react-bootstrap'
 import Ratings from 'react-ratings-declarative';
+import { Link } from 'react-router-dom';
 import MovieAdd from '../MovieAdd/MovieAdd';
 
 
@@ -11,7 +12,8 @@ const Filter = ({ changeRating, rate,handelChange,title }) => {
         <div>
             <Navbar bg="light" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">Movie App</Navbar.Brand>
+                    <Link to={'/'}>
+                    <Navbar.Brand href="#home">Movie App</Navbar.Brand></Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
